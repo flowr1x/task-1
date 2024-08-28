@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <style>
+        html,
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            line-height: 170%;
+            font-size: 20px;
+        }
+
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header,
+        footer {
+            background: gray;
+            padding: 25px 0;
+        }
+
+        main {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        @media screen and (max-width: 992px) {
+            body {
+                align-items: stretch;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            aside  {
+                display: contents;
+            }
+            aside:first-child {
+                order: 1;
+            }
+            aside div:last-child {
+                order: 3;
+            }
+            section {
+                flex: 0 1 auto;
+                order: 2;
+            }
+        }
+
+        aside {
+            flex: 0 0 31%;
+        }
+
+        aside div {
+            height: 200px;
+        }
+
+        aside div:first-child {
+            background: green;
+        }
+
+        aside div:last-child {
+            background: red;
+        }
+
+        section {
+            background: yellow;
+            flex: 1 1 auto;
+        }
+
+        img {
+            margin: 0 10px 10px 0;
+            float: left;
+            height: 320px;
+            width: 320px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <aside>
+            <div></div>
+            <div></div>
+        </aside>
+        <section>
+            <img src="./html.webp" alt="html">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, assumenda animi eaque nobis rerum
+                veniam molestias reiciendis earum natus autem fugiat consectetur, consequatur eligendi saepe!
+                Perferendis error accusantium dolorem necessitatibus odit sed facere amet quas veritatis! Quae cumque
+                repellat mollitia dolores voluptatum! Iure, tempora. Dolore dicta non voluptatem ipsa sequi inventore.
+                Aliquam quasi adipisci, eligendi voluptatibus atque harum vitae aut sed illo eius ducimus placeat
+                quibusdam corporis magni veniam enim sint quas veritatis molestiae! Explicabo nobis porro quod ullam
+                deserunt, eveniet illo dolorem, necessitatibus molestias quis, atque doloribus praesentium. Officiis
+                nisi quidem molestiae aspernatur quo perspiciatis placeat voluptate sit repudiandae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, assumenda animi eaque nobis rerum
+                veniam molestias reiciendis earum natus autem fugiat consectetur, consequatur eligendi saepe!
+                Perferendis error accusantium dolorem necessitatibus odit sed facere amet quas veritatis! Quae cumque
+                repellat mollitia dolores voluptatum! Iure, tempora. Dolore dicta non voluptatem ipsa sequi inventore.
+                Aliquam quasi adipisci, eligendi voluptatibus atque harum vitae aut sed illo eius ducimus placeat
+                quibusdam corporis magni veniam enim sint quas veritatis molestiae! Explicabo nobis porro quod ullam
+                deserunt, eveniet illo dolorem, necessitatibus molestias quis, atque doloribus praesentium. Officiis
+                nisi quidem molestiae aspernatur quo perspiciatis placeat voluptate sit repudiandae.</p>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
